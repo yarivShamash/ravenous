@@ -7,7 +7,9 @@ class BusinessList extends React.Component{
         return(
             <div class="BusinessList">
                 {
-                    this.props.businesses.map((business) => {return <Business business = {business}/>})
+                    this.props.businesses.map((business) => {
+                        return <Business business = {business} key={business.id}/>
+                    })
                     //we can use this.props because in Apps.js the <Businesses /> component has a matching attribute
                 }
             </div>
